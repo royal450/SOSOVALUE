@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Earn Money Project - Daily Activities for 70K-80K Income">
+    <meta name="keywords" content="Earn Money, Daily Income, Referral Program, Online Earnings">
+    <meta name="author" content="Earnings Team">
+    <title>Earn Money Project - Daily Activities for 70K-80K Income</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3c72;
+            --secondary: #2a5298;
+            --accent: #FF6B35;
+            --accent-light: #F7B733;
+            --success: #25D366;
+            --dark: #0f1a3a;
+            --light: #f8f9fa;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --gradient-accent: linear-gradient(90deg, var(--accent), var(--accent-light));
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--gradient);
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Mobile-First Responsive Design */
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        /* Trust Badge - Mobile Optimized */
+        .trust-badge {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            padding: 8px 12px;
+            z-index: 1000;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            max-width: 160px;
+        }
+        
+        .trust-badge i {
+            color: #4CAF50;
+            font-size: 14px;
+        }
+        
+        /* Hero Section - Mobile Optimized */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231e3c72"/><path d="M0 0L100 100M100 0L0 100" stroke="%232a5298" stroke-width="1"/></svg>') no-repeat center/cover;
+            z-index: -2;
+        }
+        
+        .hero-overlay {
+            background: rgba(15, 26, 58, 0.85);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 60px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+        
+        /* Cards - Mobile Optimized */
+        .card-rich {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            height: 100%;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .card-rich::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+        
+        .card-rich:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.12);
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+        
+        /* Progress Bar - Mobile Optimized */
+        .progress-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 4px;
+            margin: 20px 0;
+        }
+        
+        .progress-bar-custom {
+            height: 24px;
+            background: var(--gradient-accent);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            transition: width 1.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        /* WhatsApp Float - Mobile Optimized */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .whatsapp-float a {
+            background: var(--success);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .whatsapp-float a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-float a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid var(--success);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        /* Video Container - Mobile Optimized */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* CTA Buttons - Mobile Optimized */
+        .cta-btn {
+            background: var(--gradient-accent);
+            border: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            box-shadow: 0 6px 15px rgba(255, 107, 53, 0.4);
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.6);
+            color: #fff;
+        }
+        
+        /* Countdown - Mobile Optimized */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 12px;
+            min-width: 70px;
+            text-align: center;
+        }
+        
+        .countdown-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .countdown-label {
+            font-size: 0.7rem;
+            opacity: 0.8;
+        }
+        
+        /* FAQ - Mobile Optimized */
+        .faq-item {
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 15px;
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        /* Success Stories - Mobile Optimized */
+        .success-story {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .success-story:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Footer - Mobile Optimized */
+        .footer {
+            background: var(--dark);
+            padding: 50px 0 20px;
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+        
+        .footer-links h5 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        
+        .footer-links h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links ul li a:hover {
+            color: #fff;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Stats Section - Mobile Optimized */
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            flex: 0 0 50%;
+            margin-bottom: 10px;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Team Members - Mobile Optimized */
+        .team-member {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 10px;
+            transition: all 0.3s;
+        }
+        
+        .team-member:hover .team-photo {
+            border-color: var(--accent);
+            transform: scale(1.05);
+        }
+        
+        /* Trust Section - Mobile Optimized */
+        .trust-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .trust-badge-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .trust-badge-item i {
+            color: #4CAF50;
+            font-size: 1rem;
+        }
+        
+        /* Modal Styling - Mobile Optimized */
+        .modal-content {
+            background: var(--dark);
+            color: #fff;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .modal-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 0.9rem;
+        }
+        
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent);
+            color: #fff;
+            box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+        }
+        
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+        
+        /* Daily Activities Section */
+        .activity-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s;
+        }
+        
+        .activity-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-3px);
+        }
+        
+        .activity-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        /* Responsive adjustments for tablets and larger screens */
+        @media (min-width: 576px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .trust-badge {
+                top: 15px;
+                right: 15px;
+                padding: 10px 15px;
+                font-size: 14px;
+                max-width: 180px;
+            }
+            
+            .cta-btn {
+                width: auto;
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+            
+            .stat-item {
+                flex: 0 0 25%;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .countdown-item {
+                min-width: 80px;
+                padding: 15px;
+            }
+            
+            .countdown-value {
+                font-size: 1.8rem;
+            }
+            
+            .footer-logo {
+                text-align: left;
+            }
+            
+            .social-links {
+                justify-content: flex-start;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .card-rich {
+                padding: 30px;
+            }
+            
+            .trust-badge {
+                top: 20px;
+                right: 20px;
+                padding: 12px 18px;
+                font-size: 16px;
+                max-width: 200px;
+            }
+        }
+        
+        /* Special mobile navigation */
+        .mobile-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(15, 26, 58, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 999;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .mobile-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.7rem;
+            transition: all 0.3s;
+        }
+        
+        .mobile-nav-item i {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+        
+        .mobile-nav-item.active {
+            color: var(--accent);
+        }
+        
+        .mobile-nav-item:hover {
+            color: #fff;
+        }
+        
+        /* Hide mobile nav on larger screens */
+        @media (min-width: 768px) {
+            .mobile-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Badge -->
+    <div class="trust-badge">
+        <i class="fas fa-shield-alt"></i>
+        <span>Verified & Trusted</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <h1 class="hero-title">💰 Earn Money Project</h1>
+                    <p class="hero-subtitle">Daily Activities for 70K-80K Income | I'll Guide You Step-by-Step</p>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar-custom" role="progressbar" style="width: 3.14%;" aria-valuenow="3.14" aria-valuemin="0" aria-valuemax="100">
+                            EXP: 628K/20M (3.14%)
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="https://sosovalue.com/join/882GY6T5" class="btn cta-btn">🎁 Start Earning Now!</a>
+                        <a href="https://wa.me/919104037184?text=Hi! I want to join this earning project, please guide me!" class="btn cta-btn" style="background: var(--success);">
+                            <i class="fab fa-whatsapp"></i> Get Personal Guidance
+                        </a>
+                    </div>
+                    
+                    <div class="countdown mt-4">
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="days">00</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="hours">00</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="minutes">00</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="seconds">00</div>
+                            <div class="countdown-label">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section" id="stats">
+        <div class="container">
+            <h2 class="section-title">Project in Numbers</h2>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-value">70K-80K</div>
+                    <div class="stat-label">Potential Income</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">20M+</div>
+                    <div class="stat-label">Total Rewards</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">8M+</div>
+                    <div class="stat-label">Active Earners</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">20%</div>
+                    <div class="stat-label">Referral Bonus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Activities Section -->
+    <section class="section bg-dark" id="activities">
+        <div class="container">
+            <h2 class="section-title">Simple Daily Activities</h2>
+            <p class="text-center mb-4">Just follow these simple steps daily to earn money</p>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h4>Daily Check-ins</h4>
+                            <p>Just log in daily to earn points - takes less than 2 minutes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Refer Friends</h4>
+                            <p>Share your referral link and earn 20% bonus on their earnings</p>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div>
+                            <h4>Complete Simple Tasks</h4>
+                            <p>Easy social media activities that take minimal time</p>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h4>Build Your Team</h4>
+                            <p>I'll help you build a team that earns together</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <button class="btn cta-btn" data-bs-toggle="modal" data-bs-target="#joinModal">
+                    Get Started with My Guidance
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profit Section -->
+    <section class="section" id="profit">
+        <div class="container">
+            <h2 class="section-title">Your Earning Potential</h2>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card-rich text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Beginner Level</h3>
+                        <p class="fs-5 fw-bold" style="color: var(--accent-light);">628K EXP = $2K-$4K</p>
+                        <p>Start with daily check-ins and basic tasks</p>
+                        <ul class="text-start mt-3">
+                            <li>Daily Check-ins</li>
+                            <li>Basic Tasks</li>
+                            <li>Social Media Engagement</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card-rich text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Pro Level</h3>
+                        <p class="fs-5 fw-bold" style="color: var(--accent);">5M EXP = $20K-$30K</p>
+                        <p>Grow your team with referrals</p>
+                        <ul class="text-start mt-3">
+                            <li>Referral Bonuses</li>
+                            <li>Team Building</li>
+                            <li>Advanced Tasks</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card-rich text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Maximum Earnings</h3>
+                        <p class="fs-5 fw-bold" style="color: #FFD700;">20M EXP = Up to $70K+</p>
+                        <p>Claim in Q1 2026!</p>
+                        <ul class="text-start mt-3">
+                            <li>Team Bonuses</li>
+                            <li>Exclusive Rewards</li>
+                            <li>Priority Access</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="https://sosovalue.com/join/882GY6T5" class="btn cta-btn">Start Your Earning Journey!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Building Section -->
+    <section class="section bg-dark" id="team">
+        <div class="container">
+            <h2 class="section-title">Build Your Earning Team</h2>
+            <p class="text-center mb-4">I'll personally guide you to build a team that earns together</p>
+            
+            <div class="row mb-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card-rich">
+                        <h3 class="mb-3">Team Benefits</h3>
+                        <ul>
+                            <li>20% bonus on all team earnings</li>
+                            <li>Weekly team challenges with extra rewards</li>
+                            <li>Exclusive team training sessions</li>
+                            <li>Priority support for team leaders</li>
+                            <li>Team ranking system with special bonuses</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card-rich">
+                        <h3 class="mb-3">My Guidance Strategy</h3>
+                        <ul>
+                            <li>Personal step-by-step guidance</li>
+                            <li>Daily engagement strategies</li>
+                            <li>Resource sharing and strategies</li>
+                            <li>Motivation with success stories</li>
+                            <li>Regular progress tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="https://sosovalue.com/join/882GY6T5" class="btn cta-btn me-2 mb-2">Join & Start Earning</a>
+                <a href="https://wa.me/919104037184?text=Hi! I want to join this earning project, please guide me!" class="btn cta-btn mb-2" style="background: var(--success);">
+                    <i class="fab fa-whatsapp"></i> Chat for Personal Guidance
+                </a>
+                <p class="mt-3">20% bonus on every referral - Build your team, earn more!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            Is this project real?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, this is a verified platform with 8M+ active users and real earning potential.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            How much time do I need to invest?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Just 10-15 minutes daily for check-ins and simple tasks. More time can lead to higher earnings through team building.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            Is there any risk?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            This is an established platform with real utility. As with any online earning opportunity, results may vary based on your effort.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            When will I receive my earnings?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Rewards will be distributed in Q1 2026. Until then, you can continue to earn more points.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            How do I get personal guidance?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Simply join through the link and message me on WhatsApp. I'll provide step-by-step guidance to maximize your earnings.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 text-center text-md-start">
+                    <div class="footer-logo">Earnings Project</div>
+                    <p>A verified platform helping users earn money through simple daily activities.</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#activities">Activities</a></li>
+                            <li><a href="#profit">Earnings</a></li>
+                            <li><a href="#team">Team</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Resources</h5>
+                        <ul>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#stats">Stats</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="footer-links">
+                        <h5>Contact for Guidance</h5>
+                        <ul>
+                            <li><i class="fab fa-whatsapp me-2"></i> +91 9104037184</li>
+                            <li><i class="fas fa-envelope me-2"></i> Get personal guidance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Earnings Team. All rights reserved. | Contact: +91 9104037184</p>
+                <p class="mt-2">This website is for informational purposes only. Online earnings are subject to individual effort and platform terms.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/919104037184?text=Hi! I want to join this earning project, please guide me!" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav d-md-none">
+        <a href="#home" class="mobile-nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#activities" class="mobile-nav-item">
+            <i class="fas fa-tasks"></i>
+            <span>Activities</span>
+        </a>
+        <a href="#profit" class="mobile-nav-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Earnings</span>
+        </a>
+        <a href="#team" class="mobile-nav-item">
+            <i class="fas fa-users"></i>
+            <span>Team</span>
+        </a>
+    </div>
+
+    <!-- Join Modal -->
+    <div class="modal fade" id="joinModal" tabindex="-1" aria-labelledby="joinModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="joinModalLabel">Join Earning Project</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Fill out this form to join and get personalized guidance to maximize your earnings</p>
+                    
+                    <form id="joinForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="experience" class="form-label">Online Earning Experience</label>
+                            <select class="form-control" id="experience" required>
+                                <option value="">Select your experience level</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn cta-btn" onclick="submitJoinForm()">Join Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap & AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const countDownDate = new Date("Jan 1, 2026 00:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }
+
+        const countdownFunction = setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.display = 'block';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Form Submission
+        function submitJoinForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const experience = document.getElementById('experience').value;
+            
+            if (name && email && phone && experience) {
+                alert('Thank you for joining! I will contact you soon with personal guidance.');
+                document.getElementById('joinForm').reset();
+                bootstrap.Modal.getInstance(document.getElementById('joinModal')).hide();
+                
+                // Redirect to the project
+                window.open('https://sosovalue.com/join/882GY6T5', '_blank');
+            } else {
+                alert('Please fill all required fields.');
+            }
+        }
+
+        // Mobile Nav Active State
+        document.querySelectorAll('.mobile-nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.mobile-nav-item').forEach(nav => {
+                    nav.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for better UX
+        window.addEventListener('load', function() {
+            // Simulate loading completion
+            setTimeout(function() {
+                document.body.classList.add('loaded');
+            }, 500);
+        });
+
+        console.log("Earnings Project Mobile-Optimized Landing Page Loaded Successfully");
+    </script>
+</body>
+</html>
